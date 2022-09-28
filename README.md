@@ -3,7 +3,7 @@ NxShell build scripts
 
 # How to run
 ```bash
-git clone git@github.com:nxshell/build.git
+git clone https://github.com/nxshell/build.git
 cd build/build
 
 npm i && node build.js
