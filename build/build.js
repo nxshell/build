@@ -3,8 +3,8 @@ const fs = require('fs');
 
 // download shell/core source code
 shelljs.cd("../");
-shelljs.exec("git clone git@github.com:nxshell/shell.git");
-shelljs.exec("git clone git@github.com:nxshell/core.git");
+shelljs.exec("git clone https://github.com/nxshell/shell.git");
+shelljs.exec("git clone https://github.com/nxshell/core.git");
 shelljs.cd("./build");
 
 const build_packages = require('./package-lock.json');
