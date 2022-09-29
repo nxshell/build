@@ -50,7 +50,7 @@ shelljs.rm("-rf", "../dist");
  * 构建Core
  */
 shelljs.cd("../core");
-shelljs.exec("npm install");
+shelljs.exec("npm install --production=false");
 shelljs.exec("npm run build");
 shelljs.cp("./dist/*.js", "../pack");
 shelljs.cp("../build/package.json", "../pack");
@@ -60,7 +60,7 @@ shelljs.cp("../build/package.json", "../pack");
  */
 shelljs.cd("../shell");
 shelljs.exec("rm -rf ./node_module");
-shelljs.exec("npm install");
+shelljs.exec("npm install --production=false");
 // run elelctron build
 shelljs.exec(`npm run rebuild`);
 
@@ -78,7 +78,7 @@ shelljs.cd("../pack");
 shelljs.mkdir("-p", "./native");
 shelljs.exec("\cp ../build/native-package.json ./native/package.json");
 shelljs.cd("native");
-shelljs.exec("npm install");
+shelljs.exec("npm install --production=false");
 electron_rebuild(['serialport', 'node-pty'])
 shelljs.exec("npm uninstall electron-rebuild");
 shelljs.cd("../");
