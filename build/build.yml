@@ -39,6 +39,6 @@ linux:
   category: Development
 mac:
   target: dmg
-  icon: ../resources/mac/icon.icns
+  icon: ../resources/mac/icon-128.icns
   category: public.app-category.developer-tools
 afterPack: ./afterPackHook.js
