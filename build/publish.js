@@ -29,6 +29,8 @@ const options = {
 
 async function upload_files(files) {
     const sftp = new SftpClient();
+     console.log('options ', options)
+     console.log('env ', process.env)
     await sftp.connect(options);
     
     for (const f of files) {
