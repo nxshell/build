@@ -1,3 +1,4 @@
+console.log('env ', process.env)
 const SftpClient = require('ssh2-sftp-client')
 const cliProgress = require('cli-progress');
 
