@@ -27,3 +27,9 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: cd build && npm install
     - run: cd build && node build.js
+    - run: cd build && node publish.js
+      env:
+        PUBLISH_HOST: ${{ secrets.PUBLISH_HOST }}
+        PUBLISH_PORT: ${{ secrets.PUBLISH_PORT }}
+        PUBLISH_USER: ${{ secrets.PUBLISH_USER }}
+        PUBLISH_PWD: ${{ secrets.PUBLISH_PWD }}
