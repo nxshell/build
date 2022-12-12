@@ -25,6 +25,6 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'npm'
+        cache: 'npms'
     - run: cd build && npm install
     - run: cd build && node build.js
